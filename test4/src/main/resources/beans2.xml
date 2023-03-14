@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- 無參構造 -->
+<!-- <bean id="user" class="com.example.test4.User">
+    <property name="name" value="秦疆"></property>
+ </bean> -->
+<!-- ============================================== -->
+ <!-- 第一種:下標賦值 -->
+ <!-- <bean id="user" class="com.example.test4.User">
+    <property name="name" value="秦疆"></property>
+    <constructor-arg index="0" value="好耶Java"></constructor-arg>
+ </bean> -->
+
+ <!-- 第二種:通過類型創建，不建議使用 -->
+<!-- <bean id="user" class="com.example.test4.User">
+    <constructor-arg type="java.lang.String" value="qinjang"></constructor-arg>
+</bean> -->
+<!-- 第三種:直接通過參數名來設置 -->
+<bean id="user" class="com.example.test4.User">
+    <constructor-arg name="name" value="秦疆"></constructor-arg>
+</bean>
+
+<!-- <bean id="userT" class="com.example.test4.UserT"></bean> -->
+<!-- 別名:如果添加了別名，我們也可以使用別名獲取到這個對象
+<alias name="user" alias="usernew" /> -->
+
+<!-- id: bean 的唯一標示符，也就是相當於我們學的對象名
+    class : bean 對象所對應的全限定名:包名+類型
+name :也是別名，而且Name可以取多個別名 -->
+<bean id="userT" class="com.example.test4.UserT" name="user2 u2,u3">
+    <property name="name" value="西部開源"></property>
+</bean>
+
+</beans>

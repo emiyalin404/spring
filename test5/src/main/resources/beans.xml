@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="address" class="com.example.test5.Address">
+    <property name="address" value="西安"></property>
+</bean>
+    <bean id="student" class="com.example.test5.Student">
+        <!-- 第一種:普通注入 -->
+    <property name="name" value="秦疆"/>
+    <!-- 第二:Bean注入，ref -->
+    <property name="address" ref="address"/>
+    <!-- 數組 -->
+    <property name="books">
+        <array>
+            <value>紅樓夢</value>
+            <value>西廂記</value>
+            <value>水滸傳</value>
+            <value>三國演義</value>
+        </array>
+    </property>
+    <!-- List -->
+    <property name="hobbys">
+        <list>
+            <value>聽歌</value>
+            <value>敲代碼</value>
+            <value>看電影</value>
+        </list>
+    </property>
+    <!-- Map -->
+    <property name="card">
+        <map>
+            <entry key="身分證" value="732823795798"></entry>
+            <entry key="銀行卡" value="28729859487349"></entry>
+        </map>
+    </property>
+    <!-- Set -->
+    <property name="games">
+        <set>
+            <value>lol</value>
+            <value>COC</value>
+            <value>BOB</value>
+        </set>
+    </property>
+<!-- null -->
+<property name="wife">
+    <null/>
+</property>
+<!-- properties -->
+<property name="info">
+    <props>
+        <prop key="driver">20190902</prop>
+        <prop key="url">男</prop>
+        <prop key="username">小明</prop>
+        <prop key="password">123456</prop>
+    </props>
+</property>
+</bean>
+
+</beans>
