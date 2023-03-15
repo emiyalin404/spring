@@ -9,7 +9,7 @@ public class Client {
         //通過調用程序處理角色來處理我們要調用的接口對象!
         pih.setRent(host);
 
-        Rent proxy=(Rent)pih.getProxy();
+        Rent proxy=(Rent)pih.getProxy();//這裡的Proxy就是動態生成，我們並沒有寫他
         proxy.rent();
     }
 }
