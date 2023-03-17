@@ -4,7 +4,7 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   <!-- configuration核心配置文件 -->
 <mapper namespace="com.example.mapper.UserMapper">
-<select id="selecrUser" resultType="user">
-select *from mybatis.user;
+<select id="selectUser" resultType="user">
+select *from quasar_test.user;
 </select>
 </mapper>

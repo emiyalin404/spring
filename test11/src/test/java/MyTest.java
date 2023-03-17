@@ -14,7 +14,7 @@ import com.example.test11.User;
 public class MyTest {
     @Test
     public void test() throws IOException{
-        String resources="mybatis-config.xml";
+        String resources="mybatis_config.xml";
         InputStream in=Resources.getResourceAsStream(resources);
 
         SqlSessionFactory sessionFactory=new SqlSessionFactoryBuilder().build(in);
